@@ -1,0 +1,122 @@
+body{
+	margin:0px;
+}
+
+#outer_header{
+	background:blue;
+	width:100%;
+	height:100px;
+}
+
+#outer_content{
+	background:yellow;
+	width:100%;
+	height:auto;
+}
+
+#logo{
+	background:white;
+	width:1235px;
+	height:60px;
+}
+
+.twitter_fb{
+	background:red;
+	width:60px;
+	height:60px;
+}
+
+#header_menu{
+	background:yellow;
+	margin-left:600px;
+}
+
+.outer_menu_list{
+	float:left;
+	background:white;
+	width:200px;
+	height:30px;
+	text-align:center;
+	margin:-5px 0 0 10px;
+}
+
+.menu_list{
+	margin-top:5px;
+}
+
+#outer_kiri{
+	width:70%;
+	background:green;
+	height:auto;
+}
+
+#outer_kanan{
+	width:30%;
+	background:red;
+	height:400px;
+}
+
+.conten_kanan_kiri{
+	float:left;
+}
+
+#outer_search{
+	border-radius:5px;
+	margin:5px 0 0 30px;
+	background:white;
+}
+
+#outer_input_text_search{
+	width:850px;
+}
+
+#input_text_search{
+	width:100%;
+	background:white;
+}
+
+#icon_search{
+	width:30%;
+	background:yellow;
+}
+
+#iconnya{
+	width:20px;
+	height:20px;
+	background:red;
+}
+
+#form_login{
+	width:95%;
+	background:white;
+	height:150px;
+	border-radius:5px;
+	margin:5px 0 0 2.5%;
+}
+
+#slide_images{
+	width:95%;
+	height:200px;
+	background:red;
+	margin-left:2.5%;
+}
+
+#outer_article{
+	width:95%;
+	height:300px;
+	margin-left:18px;
+}
+
+.main_article{
+	float:left;
+	background:white;
+	width:49%;
+	height:95%;
+	margin: 1% 0 0 1%;
+}
+
+
+
+
+
+
