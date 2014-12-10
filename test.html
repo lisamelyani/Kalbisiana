@@ -1,0 +1,85 @@
+<html>
+<head>
+    <title>Simple Dropdown Menu</title>
+    <style>
+        #navigation {
+            background-color : black;
+            width : 800px;
+            height : 39px;
+            border-bottom : 1px solid #ccc;
+        }
+        
+        #navigation ul {
+            padding:0;
+            margin:0;
+            list-style-type:none;
+        }
+         
+        #navigation ul li {
+            float:left;
+            position : relative;
+        }
+         
+        #navigation ul li a {
+            display:block;
+            padding:10px 20px;
+            color:#fff;
+            text-decoration:none;
+            font-family: calibri;
+        }
+         
+        #navigation ul li a:hover {
+            background-color:#72b626;
+        }
+         
+        /* Menu Dropdown */
+        
+        #navigation ul li ul {
+            display: none;
+        }
+         
+        #navigation ul li:hover ul {
+            display:block;
+            position: absolute;
+        }
+        
+        #navigation ul li:hover ul li a {
+            display:block;
+            background-color : black;
+            color : #fff;
+            width : 150px;
+            border-bottom : 1px solid #ccc;
+        }
+        
+        #navigation ul li:hover ul li a:hover {
+            background-color : #72b626;
+        }
+        
+        #navigation ul li:hover > a {background: #72b626;}
+    </style>
+    
+</head>
+<body>
+<div id="navigation">
+    <ul id="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Profil</a>
+            <ul>
+                <li><a href="#">Tentang Kami</a></li>
+                <li><a href="#">Visi dan Misi</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Service</a>
+            <ul>
+                <li><a href="#">Software Development</a></li>
+                <li><a href="#">Web Development</a></li>
+                <li><a href="#">Interior Design</a></li>
+                <li><a href="#">Multimedia Interactive</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Kontak Kami</a></li>
+    </ul>
+</div>
+</body>
+</html>

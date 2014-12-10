@@ -10,7 +10,6 @@ body{
 }
 
 #outer_content{
-	background:yellow;
 	width:100%;
 	height:auto;
 }
@@ -25,7 +24,6 @@ body{
 }
 
 #header_menu{
-	background:yellow;
 	margin-left:600px;
 }
 
@@ -36,18 +34,17 @@ body{
 .outer_menu_list{
 	float:left;
 	width:200px;
-	height:30px;
+	height:70px;
 	text-align:center;
-	margin:-5px 0 0 10px;
+	margin:8px 0 0 10px;
 }
 
 .menu_list{
-	margin-top:5px;
+	margin-top:10px;
 }
 
 #outer_kiri{
 	width:70%;
-	background:green;
 	height:auto;
 }
 
@@ -143,8 +140,8 @@ body{
 
 #artikel1{
 	float:left;
-	margin-left: 80px;
-	height:50%;
+	margin-left: 82px;
+	height:100%;
 }
 
 #insert_login{
@@ -194,9 +191,69 @@ body{
 
 #info{
 	width:95%;
-	background:blue;
 	height:400px;
 	border-radius:5px;
 	margin:5px 0 0 2.5%;
 	border:1px solid #000;
+}
+
+#foto_bawah{
+	margin-left: 50px;
+}
+
+   .navigation {
+            background-color : #34ff33;
+            width : 800px;
+        }
+        
+        .navigation ul {
+            padding:0;
+            margin-top:-29px;
+            list-style-type:none;
+        }
+         
+        .navigation ul li {
+            float:left;
+            position : relative;
+        }
+         
+        .navigation ul li a {
+            display:block;
+            padding:10px 20px;
+            color:#fff;
+            text-decoration:none;
+            font-family: calibri;
+			height: 40px;
+        }
+         
+        .navigation ul li a:hover {
+            background-color:#72b626;
+			height:40px;
+        }
+         
+        /* Menu Dropdown */
+        
+        .navigation ul li ul {
+            display: none;
+			height:70px;
+        }
+         
+        .navigation ul li:hover ul {
+            display:block;
+            position: absolute;
+        }
+        
+        .navigation ul li:hover ul li a {
+            display:block;
+           /* color : #fff;*/
+            width : 185px;
+			height: 20px;
+			
+        }
+        
+       /* .navigation ul li:hover ul li a:hover {
+            background-color : #blue;
+        }
+        */
+        .navigation ul li:hover > a {background: #34ff33;
 }

@@ -59,112 +59,68 @@
 							<!--aartikel kanan bawah-->
 							<div id= "artikel1">
 								<div>
-
+									<table>
+										<tr>
+											<td>
+												<a href="#">Android Versi Terbaru</a>
+											</td>
+											<td>
+												<img src="css/images/foto1.jpg" width="50px" height="50px"; >
+											</td>
+										</tr>
+									</table>
+								</div>
+								<div>
+									<table>
+										<tr>
+											<td>
+												<a href="#">Gaya Busana 2015</a>
+											</td>
+											<td>
+												<img src="css/images/foto1.jpg" width="50px" height="50px"; >
+											</td>
+										</tr>
+									</table>
 								</div>
 							</div>
 						</div>
 						
 						<div class="main_article">
 							<img id ="artikel" src="css/images/trending.jpg" >
+							<div id= "artikel1">
+								<div>
+									<table>
+										<tr>
+											<td>
+												<a href="#">Android Versi Terbaru</a>
+											</td>
+											<td class="foto_bawah">
+												<img src="css/images/foto1.jpg" width="50px" height="50px"; >
+											</td>
+										</tr>
+									</table>
+								</div>
+								<div>
+									<table>
+										<tr>
+											<td>
+												<a href="#">Gaya Busana 2015</a>
+											</td>
+											<td id="foto_bawah" >
+												<img src="css/images/foto1.jpg" width="50px" height="50px"  >
+											</td>
+										</tr>
+									</table>
+								</div>
+							</div>
 						</div>
+						
 					</div>
 				</div>
 			</div>
-			<!-- kanan -->
-			<div id="outer_kanan" class="conten_kanan_kiri">
-				<div id="form_login">
-					<div id="insert_login" border="black">
-						<table>
-							<tr>
-								<td>
-									User ID
-								</td>
-								<td class="input" align="right">
-									<input class="LoginInput" type="text" name="user_id" value=""/>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									Password 
-								</td>
-								<td class="input" align="right">
-									<input class="LoginInput" type="password" name="password" value=""/>
-								</td>
-							</tr>
-							<tr id="TombolSignIn">
-								<td colspan="2" align="right" valign="bottom">
-									<input type="submit" name="submit" value="Sign In" />
-								</td>
-							</tr>
-							<tr id="SignUp">
-								<td colspan="2" align="right" valign="bottom">
-									New to Kalbisiana ? <a href="#">Sign Up Now >></a>
-								</td>
-							</tr>
-						</table>
-					</div>
-				</div>
-				<!--sebelah kanan artikel-->
-				<div id="content_right">
-					<div class="line">
-						<table>
-							<tr>
-								<td>
-									<img src="css/images/1.jpg" >
-								</td>
-								<td>
-									Menjadi reseller fashion termurah...
-								</td>
-							</tr>
-						</table>
-					</div>
-					<div class="line1">
-						<table>
-							<tr>
-								<td>
-									<img id="line2" src="css/images/2.jpg" >
-								</td>
-								<td>
-									Reparasi komputermudi "Great Tekno"....
-								</td>
-							</tr>
-						</table>
-					</div>
-				</div>
-				<div id="info">
-				<!--logo info dan annoucment-->
-					<div>
-						<table>
-							<tr>
-								<td>
-									<div>
-										<img src="css/images/info.jpg" width="50px" >
-									</div>
-								</td>
-								<td>
-									<div>
-										<img src="css/images/annoucment.jpg" width="116px" >
-									</div>
-								</td>
-							</tr>
-						</table>
-					</div>
-				<!--info dan annoucment-->	
-				<div>
-					<table>
-						<tr>
-							<td>
-								<a href="#">=> MRT Presented "How be Good Announcer"</a>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								Seminar, Sunday 12-Nov-2014
-							</td>
-						</tr>
-					</table>
-				</div>
-				</div>
+				
+				<?php require_once ("outer_kanan.php");?>
+				
 			</div>
 		</div>
 <?php require_once("footer.php"); ?>
