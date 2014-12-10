@@ -1,8 +1,4 @@
-<html>
-	<head>
-		<link type="text/css" rel="stylesheet" href="Css/Style.css" />
-	</head>
-	<body>
+<?php require_once("body.php"); ?>
 		<?php require_once("header.php"); ?>
 		
 		<!-- Content -->
@@ -155,7 +151,18 @@
 					</div>
 				<!--info dan annoucment-->	
 				<div>
-					<a href="#">=> MRT Presented "How be Good Announcer"</a>
+					<table>
+						<tr>
+							<td>
+								<a href="#">=> MRT Presented "How be Good Announcer"</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Seminar, Sunday 12-Nov-2014
+							</td>
+						</tr>
+					</table>
 				</div>
 				</div>
 			</div>
