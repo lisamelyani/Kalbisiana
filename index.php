@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 <html>
 	<head>
 		<link type="text/css" rel="stylesheet" href="Css/Style.css" />
 	</head>
 	<body>
+=======
+<?php require_once("body.php"); ?>
+>>>>>>> origin/master
 		<?php require_once("header.php"); ?>
 		
 		<!-- Content -->
@@ -57,14 +61,79 @@
 				<div>
 					<div id="outer_article">
 						<div class="main_article">
+<<<<<<< HEAD
 							<img id ="artikel" src="css/images/new_artikel.jpg" >
+=======
+							<div>
+								<img id ="artikel" src="css/images/new_artikel.jpg" >
+							</div>
+							<!--aartikel kanan bawah-->
+							<div id= "artikel1">
+								<div>
+									<table>
+										<tr>
+											<td>
+												<a href="#">Android Versi Terbaru</a>
+											</td>
+											<td>
+												<img src="css/images/foto1.jpg" width="50px" height="50px"; >
+											</td>
+										</tr>
+									</table>
+								</div>
+								<div>
+									<table>
+										<tr>
+											<td>
+												<a href="#">Gaya Busana 2015</a>
+											</td>
+											<td>
+												<img src="css/images/foto1.jpg" width="50px" height="50px"; >
+											</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+>>>>>>> origin/master
 						</div>
+						
 						<div class="main_article">
 							<img id ="artikel" src="css/images/trending.jpg" >
+<<<<<<< HEAD
+=======
+							<div id= "artikel1">
+								<div>
+									<table>
+										<tr>
+											<td>
+												<a href="#">Android Versi Terbaru</a>
+											</td>
+											<td class="foto_bawah">
+												<img src="css/images/foto1.jpg" width="50px" height="50px"; >
+											</td>
+										</tr>
+									</table>
+								</div>
+								<div>
+									<table>
+										<tr>
+											<td>
+												<a href="#">Gaya Busana 2015</a>
+											</td>
+											<td id="foto_bawah" >
+												<img src="css/images/foto1.jpg" width="50px" height="50px"  >
+											</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+>>>>>>> origin/master
 						</div>
+						
 					</div>
 				</div>
 			</div>
+<<<<<<< HEAD
 			<!-- kanan -->
 			<div id="outer_kanan" class="conten_kanan_kiri">
 				<div id="form_login">
@@ -126,6 +195,11 @@
 						</table>
 					</div>
 				</div>
+=======
+				
+				<?php require_once ("outer_kanan.php");?>
+				
+>>>>>>> origin/master
 			</div>
 		</div>
 <?php require_once("footer.php"); ?>
