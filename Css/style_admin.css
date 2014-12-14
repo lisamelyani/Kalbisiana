@@ -98,7 +98,7 @@ body{
 	background:white;
 	height:230px;
 	border-radius:5px;
-	margin-left:45px;
+	margin:5px 0 0 2.5%;
 }
 
 .line1{
@@ -174,7 +174,7 @@ body{
 	clear: both;
 	height: 20px;
 	margin-left: 60px;
-	margin-right: 78px;
+	margin-right:78px;
 	padding: 1em;
 	text-align: center;
 	border-top: 3px solid #34ff33;
