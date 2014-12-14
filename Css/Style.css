@@ -103,7 +103,10 @@ body{
 
 .line1{
 	border-top: 3px solid #34ff33;
+<<<<<<< HEAD
+=======
 	border-bottom: 3px solid #34ff33;
+>>>>>>> origin/master
 	height:100px;
 }
 
@@ -141,6 +144,19 @@ body{
 	margin-left: 80px;
 	height:12%;
 }
+<<<<<<< HEAD
+
+#insert_login{
+	float: left;
+	margin-left: 30px;
+}
+
+#btn_login{
+	float: right;
+	margin-right: 30px ;
+	width: 120px;
+	height: 20%;
+=======
 
 #artikel1{
 	float:left;
@@ -179,6 +195,7 @@ body{
 	text-align: center;
 	border-top: 3px solid #34ff33;
 	color: #006400;
+>>>>>>> origin/master
 }
 
 #insert_login table{
@@ -186,6 +203,33 @@ body{
 	margin-left: 10px;
 }
 
+<<<<<<< HEAD
+#sign_up{
+	float: left;
+	margin-left: 30px;
+	
+}
+
+.LoginInput{
+	width:230px;
+}
+#footer{
+	clear: both;
+	height: 2em;
+	margin: 0;
+	padding: 1em;
+	text-align: center;
+	border-top: 3px solid #34ff33;
+	color: #006400;
+}
+
+#insert_login table{
+	margin-top: 20px;
+	margin-left: 10px;
+}
+
+=======
+>>>>>>> origin/master
 #TombolSignIn{
 	height: 40px;
 }
@@ -193,6 +237,13 @@ body{
 #SignUp{
 	height: 30px;
 }
+<<<<<<< HEAD
+
+#Kanan{
+float:right;
+margin-right : 450px;
+margin-bottom : 100px;
+=======
 
 #info{
 	width:95%;
@@ -261,6 +312,7 @@ body{
         }
         */
         .navigation ul li:hover > a {background: #34ff33;
+<<<<<<< HEAD
 }
 
 .tentangUser{
@@ -306,4 +358,7 @@ body{
 	margin-left: 30px;
 	border-top: 3px solid #34ff33;
 	height:100px;
+=======
+>>>>>>> origin/master
+>>>>>>> origin/master
 }
