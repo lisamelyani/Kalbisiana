@@ -1,42 +1,49 @@
 <?php include ("body.php");?>
 <?php include("header.php");?>
-	<div>
+
+	<div id="foto">
 		<table>
+			<td><img width=100 height=100 src="1.jpg"/></td>
+					</table>
+				</div>
+	<div id = "geser">
+	<table>
 			<tbody>
+				
 				<tr>
-					<td><img width=100 height=100 src="1.jpg"/></td>
-					<td valign="top" style="padding-left:10px;">
+					<td>
 						<a href=#>Upload Pictures</a>
 					</td>
-					<td valign="top" style="padding-left:10px;">/</td>
-					<td valign="top" style="padding-left:10px;">
-						<a href=#>Delete Current Pictures</a>
-					</td>
-				<tr>
-					<td valign="top" style="padding-left:10px;">
-						<div>
-							<td><a href=#>Edit Profiles</a>
-							</td></div>
-						</td>
 				</tr>
+				<tr>	
+					<td><a href=#>Edit Profiles</a>
+							</td>
+					</tr>
+				<tr>
+					<td>
+							<a href=#>Create New Article</a>
+						</td>
+					</tr>
+				<tr>
+					<td>
+						<a href=#>Create Event</a>
+						</td>
+					</tr>
 				<tr>
 					<td>
 							<div>
-										<td valign="top" style="padding-left:10px;">
-											<a href=#>Create New Article</a>
-										</td>
+										
 										<td valign="top" style="padding-left:10px;">/</td>
 										<td valign="top" style="padding-left:10px;">
 											<a href=#>View Articles</a>
 										</td></div>
-									</td>
+									</td> 
 								</tr>
+						<br/>
 						<tr>
 							<td>
 								<div>
-										<td valign="top" style="padding-left:10px;">
-											<a href=#>Create Event</a>
-										</td></div>
+										</div>
 									</td>
 								</tr>
 									</tbody>
@@ -62,6 +69,7 @@
 		<tr>
 			<td></td>
 		</tr></table></div>
+	
 <div id = "Kanan">
 	<table>
 		<tr>
@@ -75,3 +83,4 @@
 			<td><input type ="button" name ="submit" value = "CANCEL"></td>
 		</tr>
 	</table>
+	

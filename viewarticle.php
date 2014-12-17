@@ -1,5 +1,6 @@
 <?php include ("body.php");?>
 <?php include ("header.php");?>
+<?php include ("outer_kanan.php");?>
 <div>
 		<table>
 			<tbody>
