@@ -1,36 +1,38 @@
 <!-- kanan -->
 			<div id="outer_kanan" class="conten_kanan_kiri">
 				<div id="form_login">
-					<div id="insert_login" border="black">
-						<table>
-							<tr>
-								<td>
-									User ID
-								</td>
-								<td align="right">
-									<input class="LoginInput" type="text" name="user_id" value=""/>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									Password 
-								</td>
-								<td align="right">
-									<input class="LoginInput" type="password" name="password" value=""/>
-								</td>
-							</tr>
-							<tr id="TombolSignIn">
-								<td colspan="2" align="right" valign="bottom">
-									<input type="submit" name="submit" value="Sign In" />
-								</td>
-							</tr>
-							<tr id="SignUp">
-								<td colspan="2" align="right" valign="bottom">
-									New to Kalbisiana ? <a href="signup.php">Sign Up Now >></a>
-								</td>
-							</tr>
-						</table>
-					</div>
+					<form action="login_proses.php" method="POST">
+						<div id="insert_login" border="black">
+							<table>
+								<tr>
+									<td>
+										User ID
+									</td>
+									<td align="right">
+										<input class="LoginInput" type="text" name="user_id" value=""/>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Password 
+									</td>
+									<td align="right">
+										<input class="LoginInput" type="password" name="password" value=""/>
+									</td>
+								</tr>
+								<tr id="TombolSignIn">
+									<td colspan="2" align="right" valign="bottom">
+										<input type="submit" name="submit" value="Sign In" />
+									</td>
+								</tr>
+								<tr id="SignUp">
+									<td colspan="2" align="right" valign="bottom">
+										New to Kalbisiana ? <a href="signup.php">Sign Up Now >></a>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</form>
 				</div>
 <!--sebelah kanan artikel-->
 				<div id="content_right">

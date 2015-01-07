@@ -103,13 +103,7 @@ body{
 
 .line1{
 	border-top: 3px solid #34ff33;
-<<<<<<< HEAD
-
 	border-bottom: 3px solid #34ff33;
-
-=======
-	border-bottom: 3px solid #34ff33;
->>>>>>> origin/master
 	height:100px;
 }
 
@@ -147,22 +141,6 @@ body{
 	margin-left: 80px;
 	height:12%;
 }
-<<<<<<< HEAD
-
-
-#insert_login{
-	float: left;
-	margin-left: 30px;
-}
-
-#btn_login{
-	float: right;
-	margin-right: 30px ;
-	width: 120px;
-	height: 20%;
-
-=======
->>>>>>> origin/master
 
 #artikel1{
 	float:left;
@@ -194,39 +172,9 @@ body{
 }
 #footer{
 	clear: both;
-<<<<<<< HEAD
-	height: 2em;
-	margin: 0;
-	padding: 1em;
-	text-align: center;
-	border-top: 3px solid #34ff33;
-	color: #006400;
-
-}
-
-#insert_login table{
-	margin-top: 20px;
-	margin-left: 10px;
-}
-
-#sign_up{
-	float: left;
-	margin-left: 30px;
-	
-}
-
-.LoginInput{
-	width:230px;
-}
-#footer{
-	clear: both;
-	height: 2em;
-	margin: 0;
-=======
 	height: 20px;
 	margin-left: 60px;
 	margin-right:78px;
->>>>>>> origin/master
 	padding: 1em;
 	text-align: center;
 	border-top: 3px solid #34ff33;
@@ -238,10 +186,6 @@ body{
 	margin-left: 10px;
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/master
 #TombolSignIn{
 	height: 40px;
 }
@@ -249,23 +193,6 @@ body{
 #SignUp{
 	height: 30px;
 }
-<<<<<<< HEAD
-
-#foto{
-
-}
-
-#geser {
-top; 
-padding-left : 100px;
-}
-#Kanan{
-float:right;
-margin-right : 450px;
-margin-bottom : 100px;
-}
-=======
->>>>>>> origin/master
 
 #info{
 	width:95%;
@@ -334,9 +261,6 @@ margin-bottom : 100px;
         }
         */
         .navigation ul li:hover > a {background: #34ff33;
-<<<<<<< HEAD
-
-=======
 }
 
 .tentangUser{
@@ -382,5 +306,4 @@ margin-bottom : 100px;
 	margin-left: 30px;
 	border-top: 3px solid #34ff33;
 	height:100px;
->>>>>>> origin/master
 }
