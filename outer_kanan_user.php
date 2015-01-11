@@ -5,7 +5,7 @@
 						<table>
 							<tr>
 								<td>
-									<h1>Hi! User</h1>
+									<h1>Hi! <?php echo htmlentities($_SESSION['namaUser']);?></h1>
 								</td>
 							</tr>
 							<tr>

@@ -8,13 +8,11 @@
 	$email = $_POST['email'];
 	$gender = $_POST['gender'];
 	$status = $_POST['status'];
-	//$upload = $_FILES['upload'];
 	$bio = $_POST['bio'];
 	
-	/* echo $password;	
-	//$pass = pass_crypt($password);
-	
-	//$file = $_FILES['upload'];
+	$pass = pass_crypt($password);
+	if(isset($_FILES['file'])) {
+	$file = $_FILES['file'];
 		
 		$file_name = $file['name'];
 		$file_tmp = $file['tmp_name'];
@@ -24,17 +22,13 @@
 		$ext = explode('.', $file['name']);
 		$ext = strtolower(end($ext));
 		
-		echo $ext;
-		
 		$sumber = $file['tmp_name'];
 		$tujuan = "gambar/" . $file_name;
 		
-			move_uploaded_file($sumber, $tujuan); */
-	if(!mysqli_query($sql= "INSERT INTO user (id,name) VALUES ('$user_id','$name')"))
-	{
-	echo ("error desc: " . mysqli_error($sql));
+			move_uploaded_file($sumber, $tujuan);
 	}
-	//$sql = "INSERT INTO user (id, name, email, password, gender, status, foto, bio) VALUES ('$user_id','$name','$email','$pass','$gender','$status','$tujuan','$bio')";
+	$sql = "INSERT INTO user (id, nama, email, password, gender, status, bio, foto) VALUES ($user_id,'$name','$email','$pass','$gender','$status','$bio','$tujuan')";
+	echo "<br /><br />" . $sql;
 	mysqli_query($koneksi, $sql);
-	header('Location: signup.php');
+	header('Location: sukses.php');
 ?>

@@ -1,3 +1,6 @@
+<?php 
+session_start();
+require_once("koneksi.php"); ?>
 <html>
 	<head>
 		<link type="text/css" rel="stylesheet" href="Css/style_admin.css" />
