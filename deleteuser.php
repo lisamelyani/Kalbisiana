@@ -1,6 +1,6 @@
-<?php 
-session_start();
-require_once("koneksi.php"); ?>
+<?php
+	include ("koneksi.php");
+?>
 <html>
 	<head>
 		<link type="text/css" rel="stylesheet" href="Css/style_admin.css" />
@@ -71,10 +71,14 @@ require_once("koneksi.php"); ?>
 				</div>
 				
 				<!-- tengah -->
-				<div style="margin-left:20px;">
-					<h1>Welcome to User Page!</h1>
-				</div>
+				<form action="deleteproses.php" method="POST">
+					<div style="margin-left:20px;">
+						<h1>Admin - Delete User</h1>
+					</div>
+					Masukkan User ID : <input type ="text" name="id" value="">
+					<input type ="submit" name ="delete" value="Delete User">
+				</form>
 			</div>
 		</div>
-		<?php require_once ("outer_kanan_user.php");?>
+		<?php require_once ("outer_kanan_admin.php");?>
 <?php require_once("footer.php"); ?>

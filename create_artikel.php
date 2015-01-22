@@ -1,3 +1,6 @@
+<?php 
+session_start();
+require_once("koneksi.php"); ?>
 <html>
 	<head>
 		<link type="text/css" rel="stylesheet" href="Css/style_admin.css" />
@@ -70,22 +73,34 @@
 				<!-- tengah -->
 				<div style="margin-left:20px;">
 					<table>
+					<form action="add_new_artikel.php" method="POST">
 						<tr><!--buka TR atas-->
 							<td>
 								Judul
+								
 								<input class="LoginInput" type="text" name="judul" value=""/>
+								
+								Tipe
+								<select name="tipe">
+												<option name="bisnis">Business</option>
+												<option name="sport">Sport</option>
+												<option name="hidup">Lifestyle</option>
+								</select>
+								<input style="opacity:0;" name="nim" value="<?php echo htmlentities($_SESSION['idNIM']);?>"/>
 							</td>
 						</tr><!--tutup TR atas-->
 						<tr>
 							<td>
 								<textarea name="content" rows="20" cols="94"></textarea>
 							</td>
+							
 						</tr>
 						<tr>
 							<td>
 								<input type="submit" name="isi" value="Create" />
 							</td>
 						</tr>
+					</form>
 					</table>
 					<!--<h1>create article!</h1>-->
 				</div>

@@ -38,7 +38,7 @@
 									<img src="css/images/edit.png" width="100px" height="35px"></img>
 								</td>
 								<td>
-									<img src="css/images/delete.png" width="100px" height="35px"></img>
+									<a href="deleteuser.php"><img src="css/images/delete.png" width="100px" height="35px"></img></a>
 								</td>
 							</tr>
 						</table>
