@@ -4,6 +4,29 @@
 <html>
 	<head>
 		<link type="text/css" rel="stylesheet" href="Css/style_admin.css" />
+		<meta charset="utf-8">
+  <title>jQuery UI Dialog - Modal confirmation</title>
+  
+  <script src="jquery/jquery.js"></script>
+  
+  
+  <script>
+  $(function() {
+    $( "#dialog-confirm" ).dialog({
+      resizable: false,
+      height:140,
+      modal: true,
+      buttons: {
+        "Delete this user?": function() {
+          $( this ).dialog( "close" );
+        },
+        Cancel: function() {
+          $( this ).dialog( "close" );
+        }
+      }
+    });
+  });
+  </script>
 	</head>
 	<body>
 <!-- Header --->
@@ -76,7 +99,18 @@
 						<h1>Admin - Delete User</h1>
 					</div>
 					Masukkan User ID : <input type ="text" name="id" value="">
-					<input type ="submit" name ="delete" value="Delete User">
+					<input type ="submit" name ="delete" value="Delete User" onclick="">
+					<script>
+						function myFunction() {
+							var x;
+							if (confirm("Are you sure you want to delete?") == true) {
+								x = "You pressed OK!";
+							} else {
+								x = "You pressed Cancel!";
+							}
+							document.getElementById("demo").innerHTML = x;
+						}
+					</script>
 				</form>
 			</div>
 		</div>

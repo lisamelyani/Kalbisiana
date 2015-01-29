@@ -9,11 +9,13 @@ body{
 	border: 2px solid #c9d5e3;
 	margin-left: 60px;
 	margin-right:30px;
+	font-family: calibri;
 }
 
 #outer_content{
 	width:100%;
 	height:auto;
+	font-family: calibri;
 }
 
 #logo{
@@ -39,6 +41,7 @@ body{
 	height:70px;
 	text-align:center;
 	margin:8px 0 0 10px;
+	font-family: calibri;
 }
 
 .menu_list{
@@ -73,6 +76,7 @@ body{
 #input_text_search{
 	width:100%;
 	background:white;
+	font-family: calibri;
 }
 
 #icon_search{
@@ -91,6 +95,7 @@ body{
 	border-radius:5px;
 	margin:5px 0 0 2.5%;
 	border:1px solid #000;
+	font-family: calibri;
 }
 
 #content_right{
@@ -140,17 +145,20 @@ body{
 	float:left;
 	margin-left: 80px;
 	height:12%;
+	font-family: calibri;
 }
 
 #artikel1{
 	float:left;
 	margin-left: 82px;
 	height:100%;
+	font-family: calibri;
 }
 
 #insert_login{
 	float: left;
 	margin-left: 30px;
+	font-family: calibri;
 }
 
 #btn_login{
@@ -158,13 +166,14 @@ body{
 	margin-right: 30px ;
 	width: 120px;
 	height: 20%;
+	font-family: calibri;
 }
 
 
 #sign_up{
 	float: left;
 	margin-left: 30px;
-	
+	font-family: calibri;
 }
 
 .LoginInput{
@@ -188,10 +197,12 @@ body{
 
 #TombolSignIn{
 	height: 40px;
-}
+font-family: calibri;
+	}
 
 #SignUp{
 	height: 30px;
+	font-family: calibri;
 }
 
 #info{
@@ -200,7 +211,8 @@ body{
 	border-radius:5px;
 	margin:5px 0 0 2.5%;
 	border:1px solid #000;
-}
+	font-family: calibri;
+	}
 
 #foto_bawah{
 	margin-left: 50px;

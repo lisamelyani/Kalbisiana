@@ -95,7 +95,7 @@
 						Gender
 					</td>
 					<td>
-						 <select name="gender">
+						<select name="gender" width="50px">
 						<option value="" selected>Select Gender</option>
 						<option value="Male">Male</option>
 						<option value="Female">Famale</option>
@@ -128,11 +128,9 @@
 					</td>
 				</tr>
 				<tr>
+					<td></td>
 					<td>
-						<input type ="submit" name ="adduser" value="Add User">
-					</td>
-					<td>
-						<a href= "admin.php"style="text-decoration:none"><input type ="button" name ="back" value="Back" /></a>
+						<input type ="submit" name ="adduser" value="Add User"> &nbsp <a href= "admin.php"style="text-decoration:none"><input type ="button" name ="back" value="Back" /></a>
 					</td>
 				</tr>
 				</table>
