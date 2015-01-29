@@ -30,7 +30,7 @@
 									<a href="create_artikel.php"><img src="css/images/u-c.png" width="100px" height="35px"></img></a>
 								</td>
 								<td>
-									<a href="update_artikel.php"><img src="css/images/u-v.png" width="100px" height="35px"></img></a>
+									<a href="viewisiarticle.php?id=<?php echo htmlentities($_SESSION['idNIM']) ;?>"><img src="css/images/u-v.png" width="100px" height="35px"></img></a>
 								</td>
 							</tr>
 							<tr>
