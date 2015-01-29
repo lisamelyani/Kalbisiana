@@ -35,10 +35,10 @@
 							</tr>
 							<tr>
 								<td>
-									<a href="view_writter.php?id=<?php echo htmlentities($_SESSION['idNIM']);?>"> <img src="css/images/u-e.png" width="100px" height="35px" /></a>
+									<a href="edit_user.php?id=<?php echo htmlentities($_SESSION['idNIM']) ;?>"> <img src="css/images/u-e.png" width="100px" height="35px" /></a>
 								</td>
 								<td>
-									<a href="delete_artikel.php"><img src="css/images/u-d.png" width="100px" height="35px"></img></a>
+									<a href="view_user.php?id=<?php echo htmlentities($_SESSION['idNIM']) ;?>"><img src="css/images/u-d.png" width="100px" height="35px"></img></a>
 								</td>
 							</tr>
 						</table>

@@ -80,7 +80,16 @@
 				<!-- tengah -->
 				<div style="margin-left:20px;">
 					<h1>Welcome to Admin Page!</h1>
-					 <a href = "adduser.php" style="text-decoration:none"><input type="button" name="insert" value="Add User" /></a>
+					<table>
+						<tr>
+							<td>
+								<a href = "adduser.php" style="text-decoration:none"><input type="button" name="insert" value="Add User" /></a>
+							</td>
+							<td>
+								<a href = "index.php" style="text-decoration:none"><input type="button" name="insert" value="Log Out" /></a>
+							</td>
+						</tr>
+					</table>
 					<br />
 					<br />
 	<table border = "1">

@@ -2,7 +2,7 @@
 <?php include ("koneksi.php")?>
 <html>
 	<head>
-		<title>Edit Profile</title>
+		<title>View Profile</title>
 		<link type="text/css" rel="stylesheet" href="Css/Style.css" />
 	</head>
 	<body>
@@ -78,8 +78,7 @@
 ?>
 
 					<div id="outer_article">
-					<form action="edituser_proses.php" method="POST">
-						<input type="text" name="idku" value="<?php echo $id;?>" style="display:none;"/>
+					<form action="view_user.php" method="POST">
 						<div class="tentangUser">
 							<table width="100%">
 								<tr>
@@ -91,7 +90,7 @@
 											</tr>
 											<tr>
 												<td><b>Name</b></td>
-												<td><input type="text" name="nama" value="<?php echo $a;?>"></td>
+												<td><span><?php echo $a;?></span></td>
 											</tr>
 											<tr>
 												<td><b>Gender</b></td>
@@ -99,7 +98,7 @@
 											</tr>
 											<tr>
 												<td><b>Email</b></td>
-												<td><input type="text" name="email" value="<?php echo $c; ?>"></td>
+												<td><span><?php echo $c; ?></span></td>
 											</tr>
 											<tr>
 												<td><b>Status</b></td>
@@ -114,15 +113,14 @@
 														<b>Biography</b>
 													</td>
 													<td>
-														<textarea type ="text" name="bio" rows="10" cols="40"><?php echo $e; ?></textarea>
+														<span><?php echo $e; ?></span>
 													</td>
 												</tr>
 											</table>
 									</td>
 								</tr>
 								<tr>
-									<td><input type="submit" name="edit" value="Edit"></td>
-									<td><a href ="user.php" style="text-decoration:none"><input type="submit" name="back" value="Back"></td></a>
+									<td><a href ="user.php">Back</td></a>
 								</tr>
 							</table>
 						</div>
