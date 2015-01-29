@@ -4,12 +4,6 @@
 	<head>
 		<title>View Profile</title>
 		<link type="text/css" rel="stylesheet" href="Css/Style.css" />
-		<?php
-			$id = $_GET['id'];
-			$sql = "SELECT * FROM user WHERE id = '$id'";
-			$hasil = mysqli_query($koneksi, $sql);
-			$baris = mysqli_fetch_array($hasil);
-		?>
 	</head>
 	<body>
 		<?php require_once("header.php"); ?>
@@ -77,22 +71,20 @@
 				<div>
 				<?php
 // 3. Menampilkan data dari Query
-while ($baris = mysqli_fetch_assoc($hasil)){
+	$id = $_GET['id'];
+	$sql = "SELECT * FROM user WHERE id = '$id'";
+	$hasil = mysqli_query($koneksi, $sql);
+	$baris = mysqli_fetch_array($hasil);
+	$a = $baris['nama'];
+	$b = $baris['gender'];
+	$c = $baris['email'];
+	$d = $baris['status'];
+	$e = $baris['bio'];
 ?>
-	<tr>
-	<td><?php echo $baris ['id']?></td>
-	<td><?php echo $baris ['nama']?></td>
-	<td><?php echo $baris ['email']?></td>
-	<td><?php echo $baris ['gender']?></td>
-	<td><?php echo $baris ['status']?></td>
-	<td><?php echo $baris ['bio']?></td>
-	<td><?php echo $baris ['foto']?></td>
-	</tr>
-<?php	
-}
-?>
+
 					<div id="outer_article">
 					<form action="edituser_proses.php" method="POST">
+						<input type="text" name="idku" value="<?php echo $id;?>" style="display:none;"/>
 						<div class="tentangUser">
 							<table width="100%">
 								<tr>
@@ -100,23 +92,23 @@ while ($baris = mysqli_fetch_assoc($hasil)){
 										<table>
 											<tr>
 												<td><b>NIM</b></td>
-												<td><input type="text" name="id" value="<?php echo $baris['id']; ?>"></td>
+												<td><span><?php echo "$id"; ?></span></td>
 											</tr>
 											<tr>
 												<td><b>Name</b></td>
-												<td><input type="text" name="nama" value="<?php echo $baris['nama']; ?>"></td>
+												<td><input type="text" name="nama" value="<?php echo $a;?>"></td>
 											</tr>
 											<tr>
 												<td><b>Gender</b></td>
-												<td><input type="text" name="gender" value="<?php echo $baris['gender']; ?>"></td>
+												<td><span><?php echo $b; ?></span></td>
 											</tr>
 											<tr>
 												<td><b>Email</b></td>
-												<td><input type="text" name="email" value="<?php echo $baris['email']; ?>"></td>
+												<td><input type="text" name="email" value="<?php echo $c; ?>"></td>
 											</tr>
 											<tr>
 												<td><b>Status</b></td>
-												<td><input type="text" name="status" value="<?php echo $baris['status']; ?>"></td>
+												<td><span><?php echo $d; ?></span></td>
 											</tr>
 										</table>
 									</td>
@@ -127,7 +119,7 @@ while ($baris = mysqli_fetch_assoc($hasil)){
 														<b>Biography</b>
 													</td>
 													<td>
-														<textarea name="bio" rows="10" cols="40" value="<?php echo $baris['bio']; ?>"></textarea>
+														<textarea type ="text" name="bio" rows="10" cols="40"><?php echo $e; ?></textarea>
 													</td>
 												</tr>
 											</table>
@@ -136,6 +128,7 @@ while ($baris = mysqli_fetch_assoc($hasil)){
 								<tr>
 									<td><input type="submit" name="edit" value="Edit"></td>
 								</tr>
+								
 							</table>
 						</div>
 						</form>
