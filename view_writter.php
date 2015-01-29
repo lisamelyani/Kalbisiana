@@ -1,6 +1,15 @@
+<?php session_start();?>
+<?php include ("koneksi.php")?>
 <html>
 	<head>
+		<title>View Profile</title>
 		<link type="text/css" rel="stylesheet" href="Css/Style.css" />
+		<?php
+			$id = $_GET['id'];
+			$sql = "SELECT * FROM user WHERE id = '$id'";
+			$hasil = mysqli_query($koneksi, $sql);
+			$baris = mysqli_fetch_array($hasil);
+		?>
 	</head>
 	<body>
 		<?php require_once("header.php"); ?>
@@ -66,96 +75,92 @@
 				
 				<!-- bawah -->
 				<div>
+				<?php
+// 3. Menampilkan data dari Query
+while ($baris = mysqli_fetch_assoc($hasil)){
+?>
+	<tr>
+	<td><?php echo $baris ['id']?></td>
+	<td><?php echo $baris ['nama']?></td>
+	<td><?php echo $baris ['email']?></td>
+	<td><?php echo $baris ['gender']?></td>
+	<td><?php echo $baris ['status']?></td>
+	<td><?php echo $baris ['bio']?></td>
+	<td><?php echo $baris ['foto']?></td>
+	</tr>
+<?php	
+}
+?>
 					<div id="outer_article">
+					<form action="edituser_proses.php" method="POST">
 						<div class="tentangUser">
 							<table width="100%">
 								<tr>
-									<td><b>Name</b></td>
-									<td>Disya Rizky Anindya</td>
+									<td>
+										<table>
+											<tr>
+												<td><b>NIM</b></td>
+												<td><input type="text" name="id" value="<?php echo $baris['id']; ?>"></td>
+											</tr>
+											<tr>
+												<td><b>Name</b></td>
+												<td><input type="text" name="nama" value="<?php echo $baris['nama']; ?>"></td>
+											</tr>
+											<tr>
+												<td><b>Gender</b></td>
+												<td><input type="text" name="gender" value="<?php echo $baris['gender']; ?>"></td>
+											</tr>
+											<tr>
+												<td><b>Email</b></td>
+												<td><input type="text" name="email" value="<?php echo $baris['email']; ?>"></td>
+											</tr>
+											<tr>
+												<td><b>Status</b></td>
+												<td><input type="text" name="status" value="<?php echo $baris['status']; ?>"></td>
+											</tr>
+										</table>
+									</td>
+									<td>
+											<table>
+												<tr>
+													<td>
+														<b>Biography</b>
+													</td>
+													<td>
+														<textarea name="bio" rows="10" cols="40" value="<?php echo $baris['bio']; ?>"></textarea>
+													</td>
+												</tr>
+											</table>
+									</td>
 								</tr>
 								<tr>
-									<td><b>Gender</b></td>
-									<td>Female</td>
-								</tr>
-								<tr>
-									<td><b>Date of Birth</b></td>
-									<td>18 &nbsp January &nbsp 1995</td>
-								</tr>
-								<tr>
-									<td><b>Religious</b></td>
-									<td>Islam</td>
-								</tr>
-								<tr>
-									<td><b>Hometown</b></td>
-									<td>Jakarta</td>
-								</tr>
-								<tr>
-									<td><b>Current City</b></td>
-									<td>Jakarta</td>
-								</tr>
-								<tr>
-									<td><b>Website</b></td>
-									<td>www.disya.com</td>
-								</tr>
-								<tr>
-									<td><b>Status</b></td>
-									<td>Student</td>
+									<td><input type="submit" name="edit" value="Edit"></td>
 								</tr>
 							</table>
 						</div>
-						<div class="biografi">
-							<center>
-							<textarea name="bio" rows="15" cols="30">
-							dfadfafafafaf
-							</textarea>
-							</center>
-						</div>
+						</form>
 					</div>
 				</div>
 			</div>
 			<!-- kanan -->
 			<div id="outer_kanan" class="conten_kanan_kiri">
 				<div id="form_login">
-					<div id="insert_login">
+					<div id="insert_login" border="black">
 						<table>
 							<tr>
 								<td>
-									<h2>Hi,<br />DISYA</h2>
+									<h1>Hi! <?php echo htmlentities($_SESSION['namaUser']);?></h1>
 								</td>
-								<td class="input" align="right">
-									<img id ="fotoUser" src="css/images/kucing.jpg" >
+							</tr>
+							<tr>
+								<td>
+									<a href="index.php"><h3>Log Out</h3></a>
 								</td>
 							</tr>
 						</table>
 					</div>
 				</div>
-				<!--sebelah kanan artikel-->
-				<div id="content_right">
-					<div class="line">
-						<table>
-							<tr>
-								<td>
-									<img src="css/images/1.jpg" >
-								</td>
-								<td>
-									<a href="#">Menjadi reseller fashion termurah...</a>
-								</td>
-							</tr>
-						</table>
-					</div>
-					<div class="line1">
-						<table>
-							<tr>
-								<td>
-									<img id="line2" src="css/images/2.jpg" >
-								</td>
-								<td>
-									<a href="#">Reparasi komputermudi "Great Tekno"....</a>
-								</td>
-							</tr>
-						</table>
-					</div>
-				</div>
+				
 				</div><!--Tutup kanan-->
 			</div>
 			

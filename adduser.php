@@ -1,3 +1,4 @@
+
 <html>
 	<head>
 		<link type="text/css" rel="stylesheet" href="Css/style_admin.css" />
@@ -68,12 +69,74 @@
 				</div>
 				
 				<!-- tengah -->
-				<div style="margin-left:20px;">
+				<div style="margin-left:50px;">
 					<h1>Admin - Add User</h1>
 				</div>
-				Masukkan User ID : <input type ="text" name="userid" value="">
-				<input type ="button" name =" adduser" value="Add User">
+				<form action="addproses.php" method = "POST" autocomplete="off">
+				<table style="margin-left:50px;">
+				<tr>
+					<td>
+						Masukkan User ID
+					</td>
+					<td>
+						<input type ="text" name="id" value="">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Masukkan Nama
+					</td>
+					<td>
+						<input type ="text" name="nama" value="">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Gender
+					</td>
+					<td>
+						 <select name="gender">
+						<option value="" selected>Select Gender</option>
+						<option value="Male">Male</option>
+						<option value="Female">Famale</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Pilih Level
+					</td>
+					<td>
+						 <select name="level">
+						<option value="" selected>Select Status</option>
+						<option value="1">Admin</option>
+						<option value="2">User</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Pilih Status 
+					</td>
+					<td>
+						<select name="status">					
+						 <option value="" selected>Select Status</option>
+						 <option value="Lecturer">Lecturer</option>
+						 <option value="College Student">College Student</option>
+						 <option value="Employee">Employee</option>
+						 </select>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type ="submit" name ="adduser" value="Add User">
+					</td>
+					<td>
+						<a href= "admin.php"style="text-decoration:none"><input type ="button" name ="back" value="Back" /></a>
+					</td>
+				</tr>
+				</table>
+				</form>
 			</div>
 		</div>
-		<?php require_once ("outer_kanan_admin.php");?>
 <?php require_once("footer.php"); ?>

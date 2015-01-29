@@ -14,25 +14,31 @@
 		$pass = pass_crypt($password);
 		$upass = mysqli_fetch_assoc($hasil);
 		if($pass == $upass['password']){
-			$lqs = "SELECT id, nama FROM user WHERE id = '$user_id'";
+			$lqs = "SELECT id, nama, level FROM user WHERE id = '$user_id'";//tambahin untuk select level
 			$hasill = mysqli_query($koneksi, $sql);
 			mysqli_num_rows($hasill);
 			$baris = mysqli_fetch_assoc($hasill);
 			
 			$id = $baris['id'];
 			$nama = $baris['nama'];
-			
-			$_SESSION['idNIM'] = $id;
-			$_SESSION['namaUser'] = $nama;
-			
-			
-			header('Location: user.php');
+			$level = $baris ['level'];
+			//	echo "level nya $level";
+			 $_SESSION['idNIM'] = $id;
+			 $_SESSION['namaUser'] = $nama;
+			 $_SESSION['levelUser'] = $level;
+			// tambahin session untuk level
+			// bikin cek level menggunakan if, jika 1 masuk sebagai admin, jika 2 user 
+			if($_SESSION['levelUser'] == 1){
+				header('Location: admin.php');
+			}else{
+				header('Location: user.php');
+			}
 		}
-		else{
-			header('Location: login.php');
+		 else{ 
+			header('Location: index.php');
 		}
 	}
 	else{
-		header('Location: login.php');
+		header('Location:  index.php');
 	}
 ?>
