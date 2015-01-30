@@ -27,7 +27,7 @@
 		
 			move_uploaded_file($sumber, $tujuan);
 	}
-	$sql = "INSERT INTO user (id, nama, email, password, gender, status, bio, foto) VALUES ($user_id,'$name','$email','$pass','$gender','$status','$bio','$tujuan')";
+	$sql = "INSERT INTO user (id, nama, email, password, gender, status, bio, foto, level) VALUES ($user_id,'$name','$email','$pass','$gender','$status','$bio','$tujuan', '2')";
 	echo "<br /><br />" . $sql;
 	mysqli_query($koneksi, $sql);
 	header('Location: sukses.php');

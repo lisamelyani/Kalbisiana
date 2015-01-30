@@ -1,19 +1,30 @@
-<?php require_once ("koneksi.php");?>
-<?php require_once ("view_proses.php");?>
+<?php
+include ("koneksi.php");	
+// 2. Lakukan Query utk Data yang sudah ada
+$sql = "SELECT * FROM artikel"; 
+$hasil = mysqli_query($koneksi, $sql);
+if(!$hasil)
+{
+	die("Query database gagal.");
+}
 
+?>
 
-
-
-<!DOCTYPE html>
 <html>
-<head>
-	<title>View User</title>
-	<link type="text/css" rel="stylesheet" href="Css/style_admin.css" />
-</head>
-
-
-<body>
-<!-- Header --->
+	<head>
+		<link type="text/css" rel="stylesheet" href="Css/style_admin.css" />
+		<title>View Article</title>
+		<?php
+			$id = $_GET['ID'];
+			$sql = "SELECT * FROM artikel WHERE id_artikel = '$id'";
+			$hasil = mysqli_query($koneksi, $sql);
+			$baris = mysqli_fetch_array($hasil);
+			$judul = $baris['judul'];
+			$isi = $baris['isi'];
+		?>
+	</head>
+	<body>
+	<!-- Header --->
 		<div id="outer_header">
 			<!-- Logo -->
 			<center>
@@ -36,13 +47,13 @@
 				</table>
 			</center>
 		</div>
-		
+	
 		<!-- Content -->
 		<div id="outer_content">
 			<!-- kiri -->
 			<div id="outer_kiri" class="conten_kanan_kiri">
 				<!-- atas -->
-				<div style="margin-left:20px;">
+				<div>
 					<table>
 						<tr>
 							<td>
@@ -78,61 +89,44 @@
 				</div>
 				
 				<!-- tengah -->
-				<div style="margin-left:20px;">
-					<h1>Welcome to Admin Page!</h1>
+				<form action="viewisiarticle.php" method="POST">
+					<div style="margin-left:20px;">
+						<h1>Isi Artikel</h1>
+					</div>
 					<table>
-						<tr>
-							<td>
-								<a href = "adduser.php" style="text-decoration:none"><input type="button" name="insert" value="Add User" /></a>
-							</td>
-							<td>
-								<a href = "index.php" style="text-decoration:none"><input type="button" name="insert" value="Log Out" /></a>
-							</td>
-						</tr>
+					
+					<tr>
+						
+						<td><input type ="text" name="tipe" value="<?php echo $baris['judul']; ?>"></td>
+					</tr>
+					<tr>
+						
+						<td><textarea name="isi" rows="20" cols="94" value=""><?php echo $baris['isi']; ?></textarea>
+								</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="viewarticle.php">Back</a>
+						</td>
+					</tr>
 					</table>
-					<br />
-					<br />
-	<table border = "1">
-	<thead>
-	<tr>
-		<th>ID</th>
-		<th>Nama</th>
-		<th>Password</th>
-		<th>Email</th>
-		<th>Gender</th>
-		<th>Status</th>
-		<th>Bio</th>
-		<th>Foto</th>
-		<th>Level</th>
-		<th>Action</th>
-	</tr>
-	</thead>
-	<tbody>
-
+				</form>
+			</div>
+		</div>
+		
+				
 <?php
 // 3. Menampilkan data dari Query
 while ($baris = mysqli_fetch_assoc($hasil)){
-?>
-	<tr>
-	<td><?php echo $baris ['id']?></td>
-	<td><?php echo $baris ['nama']?></td>
-	<td><?php echo $baris ['password']?></td>
-	<td><?php echo $baris ['email']?></td>
-	<td><?php echo $baris ['gender']?></td>
-	<td><?php echo $baris ['status']?></td>
-	<td><?php echo $baris ['bio']?></td>
-	<td><?php echo $baris ['foto']?></td>
-	<td><?php echo $baris ['level']?></td>
-	<td><a href ="edituser.php?ID=<?php echo $baris['id'];?>"> Edit </a>
-	<a href="view_delete_proses.php?status=<?php echo $baris['id'];?>" onclick="return confirm('Are you sure?')"> Delete</a></td>
-	</tr>
-<?php	
+	echo "<tr>";
+	echo "<td>" . $baris ['judul']."</td><br>";
+	echo "<td>" . $baris ['isi']."</td>";
+	echo "</tr>";	
 }
-?>
+?>		
+	
 </tbody>
-</table>
 </body>
-
 
 <?php
 // 4. Free up memori dgn mysqli_free_result
@@ -143,8 +137,5 @@ mysqli_close($koneksi);
 ?>
 
 </html>
-		
 
-
-
-		
+<?php require_once("footer.php"); ?>

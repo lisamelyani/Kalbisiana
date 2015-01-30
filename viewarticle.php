@@ -1,13 +1,20 @@
-<?php require_once ("koneksi.php");?>
-<?php require_once ("view_proses.php");?>
+<?php
+include ("koneksi.php");	
+	
+// 2. Lakukan Query utk Data yang sudah ada
+$sql = "SELECT * FROM artikel"; 
+$hasil = mysqli_query($koneksi, $sql);
+if(!$hasil)
+{
+	die("Query database gagal.");
+}
 
-
-
+?>
 
 <!DOCTYPE html>
 <html>
 <head>
-	<title>View User</title>
+	<title>View Article</title>
 	<link type="text/css" rel="stylesheet" href="Css/style_admin.css" />
 </head>
 
@@ -79,31 +86,13 @@
 				
 				<!-- tengah -->
 				<div style="margin-left:20px;">
-					<h1>Welcome to Admin Page!</h1>
-					<table>
-						<tr>
-							<td>
-								<a href = "adduser.php" style="text-decoration:none"><input type="button" name="insert" value="Add User" /></a>
-							</td>
-							<td>
-								<a href = "index.php" style="text-decoration:none"><input type="button" name="insert" value="Log Out" /></a>
-							</td>
-						</tr>
-					</table>
-					<br />
-					<br />
-	<table border = "1">
+					<h1>Your Articles</h1>
+	<table border = "1" >
 	<thead>
 	<tr>
-		<th>ID</th>
-		<th>Nama</th>
-		<th>Password</th>
-		<th>Email</th>
-		<th>Gender</th>
-		<th>Status</th>
-		<th>Bio</th>
-		<th>Foto</th>
-		<th>Level</th>
+		<th>Judul</th>
+		<th>Tipe</th>
+		<th>Tanggal</th>
 		<th>Action</th>
 	</tr>
 	</thead>
@@ -114,24 +103,20 @@
 while ($baris = mysqli_fetch_assoc($hasil)){
 ?>
 	<tr>
-	<td><?php echo $baris ['id']?></td>
-	<td><?php echo $baris ['nama']?></td>
-	<td><?php echo $baris ['password']?></td>
-	<td><?php echo $baris ['email']?></td>
-	<td><?php echo $baris ['gender']?></td>
-	<td><?php echo $baris ['status']?></td>
-	<td><?php echo $baris ['bio']?></td>
-	<td><?php echo $baris ['foto']?></td>
-	<td><?php echo $baris ['level']?></td>
-	<td><a href ="edituser.php?ID=<?php echo $baris['id'];?>"> Edit </a>
-	<a href="view_delete_proses.php?status=<?php echo $baris['id'];?>" onclick="return confirm('Are you sure?')"> Delete</a></td>
+	<td><?php echo $baris ['judul']?></td>
+	<td><?php echo $baris['tipe']?></td>
+	<td><?php echo $baris ['tanggal']?></td>
+	<td><a href="viewisiarticle.php?ID=<?php echo $baris['id_artikel'];?>">View  </a>
+	<td><a href="editarticle.php?ID=<?php echo $baris['id_artikel'];?>"> Edit </a><br>
+	</td>
 	</tr>
 <?php	
 }
 ?>
 </tbody>
-</table>
 </body>
+
+
 
 
 <?php

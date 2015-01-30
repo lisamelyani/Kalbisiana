@@ -1,32 +1,17 @@
 <?php
+session_start();
 	include ("koneksi.php");
 ?>
 <html>
 	<head>
 		<link type="text/css" rel="stylesheet" href="Css/style_admin.css" />
-		<meta charset="utf-8">
-  <title>jQuery UI Dialog - Modal confirmation</title>
-  
-  <script src="jquery/jquery.js"></script>
-  
-  
-  <script>
-  $(function() {
-    $( "#dialog-confirm" ).dialog({
-      resizable: false,
-      height:140,
-      modal: true,
-      buttons: {
-        "Delete this user?": function() {
-          $( this ).dialog( "close" );
-        },
-        Cancel: function() {
-          $( this ).dialog( "close" );
-        }
-      }
-    });
-  });
-  </script>
+		<title>Edit Article</title>
+		<?php
+			$id = $_GET['ID'];
+			$sql = "SELECT * FROM artikel WHERE id_artikel = '$id'";
+			$hasil = mysqli_query($koneksi, $sql);
+			$baris = mysqli_fetch_array($hasil);
+		?>
 	</head>
 	<body>
 <!-- Header --->
@@ -94,25 +79,41 @@
 				</div>
 				
 				<!-- tengah -->
-				<form action="deleteproses.php" method="POST">
+				<form action="editproses_article.php" method="POST">
+				<input type="text" name="id" value="<?php echo $id;?>" style="display:none;"/>
 					<div style="margin-left:20px;">
-						<h1>Admin - Delete User</h1>
+						<h1>Edit Article</h1>
 					</div>
-					Masukkan User ID : <input type ="text" name="id" value="">
-					<input type ="submit" name ="delete" value="Delete User" onclick="">
-					<script>
-						function myFunction() {
-							var x;
-							if (confirm("Are you sure you want to delete?") == true) {
-								x = "You pressed OK!";
-							} else {
-								x = "You pressed Cancel!";
-							}
-							document.getElementById("demo").innerHTML = x;
-						}
-					</script>
+					<table>
+					<tr>
+						<td>Judul Artikel :</td>
+						<td><input type ="text" name="judul" value="<?php echo $baris['judul']; ?>"></td>
+					</tr>
+					<tr>
+						<td>Tipe</td>
+						<td><input type ="text" name="tipe" value="<?php echo $baris['tipe']; ?>"></td>
+					</tr>
+					<tr>
+						<td>Tanggal</td>
+						<td><input type ="text" name="tanggal" value="<?php echo $baris['tanggal']; ?>"></td>
+					</tr>
+					<tr>
+						<td>Isi Artikel</td>
+						<td><textarea name="isi" rows="20" cols="94" value=""><?php echo $baris['isi']; ?></textarea>
+								</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><input type ="submit" name ="edit" value="Edit"></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="viewarticle.php">Back</a>
+						</td>
+					</tr>
+					</table>
 				</form>
 			</div>
 		</div>
-		<?php require_once ("outer_kanan_admin.php");?>
+		
 <?php require_once("footer.php"); ?>

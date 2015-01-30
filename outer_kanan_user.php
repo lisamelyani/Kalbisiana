@@ -5,13 +5,17 @@
 						<table>
 							<tr>
 								<td>
-									<h1>Hi! <?php echo htmlentities($_SESSION['namaUser']);?></h1>
+									<h2>Hi! <?php echo htmlentities($_SESSION['namaUser']);?></h2>
+								</td>
+								<td rowspan="2">
+									<img src=" <?php echo htmlentities($_SESSION['fotoUser']);?>" height="100px" width="85px">
 								</td>
 							</tr>
-							<tr>
+							<tr >
 								<td>
 									<a href="index.php"><h3>Log Out</h3></a>
 								</td>
+
 							</tr>
 						</table>
 					</div>
@@ -30,7 +34,7 @@
 									<a href="create_artikel.php"><img src="css/images/u-c.png" width="100px" height="35px"></img></a>
 								</td>
 								<td>
-									<a href="update_artikel.php"><img src="css/images/u-v.png" width="100px" height="35px"></img></a>
+									<a href="viewarticle.php?id=<?php echo htmlentities($_SESSION['id_artikel']) ;?>"><img src="css/images/u-v.png" width="100px" height="35px"></img></a>
 								</td>
 							</tr>
 							<tr>

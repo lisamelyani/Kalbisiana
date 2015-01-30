@@ -89,9 +89,9 @@
 										</td>
 										<td>
 											<select name="status">
-												<option name="lecturer">Lecturer</option>
-												<option name="college_stundent">College Student</option>
-												<option name="employee">Employee</option>
+												<option name="lecturer" value="Lecturer">Lecturer</option>
+												<option name="college_stundent" value="College Student">College Student</option>
+												<option name="employee" value="Employee">Employee</option>
 											</select>
 										</td>
 									</tr>
