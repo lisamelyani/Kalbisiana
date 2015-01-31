@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<link type="text/css" rel="stylesheet" href="Css/style_admin.css" />
+		<link type="text/css" rel="stylesheet" href="css/style_admin.css" />
 	</head>
 	<body>
 <!-- Header --->
@@ -119,7 +119,7 @@
 										<tr>
 											<td align="center" valign="bottom">
 												<input type="submit" name="create" value="Create" />
-												<input type="submit" name="cancel" value="Cancel" />
+												<a href="index.php"  style="text-decoration:none;"><input type="button" value="Back"></a>
 											</td>
 										</tr>
 									</table>

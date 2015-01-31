@@ -3,7 +3,7 @@
 <html>
 	<head>
 		<title>Edit Profile</title>
-		<link type="text/css" rel="stylesheet" href="Css/Style.css" />
+		<link type="text/css" rel="stylesheet" href="css/Style.css" />
 	</head>
 	<body>
 		<?php require_once("header.php"); ?>
@@ -53,11 +53,7 @@
 					<div id="viewAtas">
 						<!-- image -->
 						<table width="70%">
-						<tr>
-							<td width="150px">
-								<img src="css/images/kucing.jpg" = width="120px" height="130px">
-							
-						</tr>
+						
 						</table>
 					</div>
 				</div>
@@ -78,7 +74,7 @@
 ?>
 
 					<div id="outer_article">
-					<form action="edituser_proses.php" method="POST">
+					<form action="edituser_proses.php" method="POST" enctype="multipart/form-data">
 						<input type="text" name="idku" value="<?php echo $id;?>" style="display:none;"/>
 						<div class="tentangUser">
 							<table width="100%">
@@ -110,9 +106,21 @@
 									<td>
 											<table>
 												<tr>
+												<td colspan=2>
+													Choose Your Profile Picture
+												</td>
+												</tr>
+												<tr>
+												<td><input type="file" name="file">
+												</td>
+												
+											</tr>
+												<tr>
 													<td>
 														<b>Biography</b>
 													</td>
+												</tr>
+												<tr>
 													<td>
 														<textarea type ="text" name="bio" rows="10" cols="40"><?php echo $e; ?></textarea>
 													</td>
@@ -131,25 +139,6 @@
 				</div>
 			</div>
 			<!-- kanan -->
-			<div id="outer_kanan" class="conten_kanan_kiri">
-				<div id="form_login">
-					<div id="insert_login" border="black">
-						<table>
-							<tr>
-								<td>
-									<h1>Hi! <?php echo htmlentities($_SESSION['namaUser']);?></h1>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="index.php"><h3>Log Out</h3></a>
-								</td>
-							</tr>
-						</table>
-					</div>
-				</div>
-				
-				</div><!--Tutup kanan-->
-			</div>
+			<?php include("outer_kanan_user.php")?>
 			
 <?php require_once("footer.php"); ?>

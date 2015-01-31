@@ -1,9 +1,9 @@
 <?php 
 	
-	$host = "localhost";
-	$user = "root";
-	$pass = "";
-	$name = "kalbisiana";
+	$host = "mysql.idhostinger.com";
+	$user = "u488099494_kalbi";
+	$pass = "1234567890qwerty";
+	$name = "u488099494_kalbi";
 	
 	$koneksi = mysqli_connect($host, $user, $pass, $name);
 	

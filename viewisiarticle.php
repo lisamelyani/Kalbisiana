@@ -12,15 +12,17 @@ if(!$hasil)
 
 <html>
 	<head>
-		<link type="text/css" rel="stylesheet" href="Css/style_admin.css" />
+		<link type="text/css" rel="stylesheet" href="css/style_admin.css" />
 		<title>View Article</title>
 		<?php
 			$id = $_GET['ID'];
+			$idm = $_GET['idm'];
 			$sql = "SELECT * FROM artikel WHERE id_artikel = '$id'";
 			$hasil = mysqli_query($koneksi, $sql);
 			$baris = mysqli_fetch_array($hasil);
 			$judul = $baris['judul'];
 			$isi = $baris['isi'];
+			$tanggal = $baris['tanggal'];
 		?>
 	</head>
 	<body>
@@ -81,8 +83,10 @@ if(!$hasil)
 						</tr>
 						<tr>
 							<td>
+								<div style="margin-left:40px;">
 								<!-- buat tanggal -->
 								26 November 2014
+								</div>
 							</td>
 						</tr>
 					</table>
@@ -90,23 +94,28 @@ if(!$hasil)
 				
 				<!-- tengah -->
 				<form action="viewisiarticle.php" method="POST">
-					<div style="margin-left:20px;">
+					<div style="margin-left:40px;">
 						<h1>Isi Artikel</h1>
 					</div>
-					<table>
+					<table style="margin-left:40px;">
 					
 					<tr>
 						
-						<td><input type ="text" name="tipe" value="<?php echo $baris['judul']; ?>"></td>
+						<td><span><b><?php echo $baris['judul']; ?></b></span></td>
 					</tr>
 					<tr>
 						
-						<td><textarea name="isi" rows="20" cols="94" value=""><?php echo $baris['isi']; ?></textarea>
+						<td><span>(<?php echo $baris['tanggal']; ?>)</span>
+						</td>
+					</tr>
+					<tr>
+						
+						<td><span><?php echo $baris['isi']; ?></span>
 								</td>
 					</tr>
 					<tr>
 						<td>
-							<a href="viewarticle.php">Back</a>
+							<a href="viewarticle.php?id=<?php  echo $idm;?>">Back</a>
 						</td>
 					</tr>
 					</table>
@@ -115,15 +124,7 @@ if(!$hasil)
 		</div>
 		
 				
-<?php
-// 3. Menampilkan data dari Query
-while ($baris = mysqli_fetch_assoc($hasil)){
-	echo "<tr>";
-	echo "<td>" . $baris ['judul']."</td><br>";
-	echo "<td>" . $baris ['isi']."</td>";
-	echo "</tr>";	
-}
-?>		
+	
 	
 </tbody>
 </body>

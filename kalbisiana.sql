@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 11, 2015 at 07:09 AM
+-- Generation Time: Jan 31, 2015 at 09:32 AM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `artikel` (
   `tipe` text NOT NULL,
   `tanggal` datetime NOT NULL,
   `status` varchar(10) NOT NULL DEFAULT 'PENDING'
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `artikel`
@@ -43,7 +43,10 @@ CREATE TABLE IF NOT EXISTS `artikel` (
 INSERT INTO `artikel` (`id_artikel`, `nim`, `judul`, `isi`, `tipe`, `tanggal`, `status`) VALUES
 (2, 2012100200, 'sukses cepat', 'hai kita mau sukses cepat', 'Business', '2015-01-10 18:40:24', ''),
 (3, 2012100200, 'sukses cepat', 'hkjdflxldsdjskf', 'Business', '2015-01-10 18:42:50', 'PENDING'),
-(4, 2012100200, 'minggu ceria', 'hari minggu yang ceria ditemani dengan tugas yang super banyak', 'Lifestyle', '2015-01-11 13:06:24', 'PENDING');
+(4, 2012100200, 'minggu ceria', 'hari minggu yang ceria ditemani dengan tugas yang super banyak', 'Lifestyle', '2015-01-11 13:06:24', 'PENDING'),
+(5, 2012100200, 'dingin', 'pagi dingin', 'Sport', '2015-01-15 08:25:07', 'PENDING'),
+(6, 2012100200, 'dsjfhk', 'hjsdkf,', 'Business', '2015-01-15 11:04:10', 'PENDING'),
+(7, 2012100184, 'detik detik menuju kebebasan setelah uas WEB', 'Sedikit banget', 'Business', '2015-01-30 13:28:10', 'PENDING');
 
 -- --------------------------------------------------------
 
@@ -68,9 +71,12 @@ CREATE TABLE IF NOT EXISTS `user` (
 --
 
 INSERT INTO `user` (`id`, `nama`, `email`, `password`, `gender`, `status`, `bio`, `foto`, `level`) VALUES
-('2012100111', 'Admin', '', '$2a$10$MauTaupasswordsayahahOgHX8BcVV6z3UfSZwHdE0.0jIVSMkOzy', '', '', '', '', 1),
-('2012100123', 'desi', 'desi@gmail.com', '$2a$10$tebakpasswordsayahahae1YJNKCNDMIW.nEgUIxyvRqhQa1rWIXS', 'Female', 'Lecturer', 'lisa', 'gambar/gambar02.jpg', 0),
-('2012100200', 'Lisa Melyani', 'lisamelyani@gmail.com', '$2a$10$tebakpasswordsayahahae09kiZWfJVl6VcstONiNsk.1oXoR1kuG', 'Female', 'College Student', 'Keep Fighting!!!', '', 2);
+('0', 'Admin', '', '$2a$10$tebakpasswordsayahahaemf/dohz7WQtT.BOSYmPmV3kMCs1P8jW', 'Female', 'Lecturer', '', 'gambar/', 1),
+('2012100018', 'Rofiatul Karomah', 'rofiakaromah@gmail.comm', '$2a$10$tebakpasswordsayahahaeKdkmq1OaS2RPO1tfXnt0PFA4tV7Amzy', 'Female', 'Lecturer', 'Tetap semangat menatap masa depan', 'gambar/fia.jpg', 2),
+('2012100152', 'Disya Rizky Anindya', 'disyarizkyanindya@gmail.com', '$2a$10$tebakpasswordsayahahaegwxCh7I8dItV1QCc5TdM2ANy560bcEW', 'Female', 'College Student', 'Hidup itu indah jika kau nikmati', 'gambar/disya.jpg', 2),
+('2012100184', 'David Meibert', 'daviddragon@gmail.com', '$2a$10$tebakpasswordsayahahae20ekBvVZNm8pn4RUpzV/cMQPOf2gGAG', 'Male', 'College Student', 'Hidup itu style G Dragon', 'gambar/david.jpg', 2),
+('2012100200', 'Lisa Melyani', 'lisamelyani@gmail.com', '$2a$10$tebakpasswordsayahahaeK9zfD74jVd0VG.oIFTxB7WuzOuSH7au', 'Female', 'College Student', 'tetap tersenyum walau capek banget', 'gambar/2012100200.jpg', 2),
+('2012100203', 'Grady Askarika', 'abcdefgrady@gmail.com', '$2a$10$tebakpasswordsayahahae/I6s73skakrh0BHaxYUA3Lp63qs2l42', 'Male', 'College Student', 'Tetap Asik aja', 'gambar/grady.jpg', 2);
 
 --
 -- Indexes for dumped tables
@@ -96,7 +102,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `artikel`
 --
 ALTER TABLE `artikel`
-MODIFY `id_artikel` int(100) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+MODIFY `id_artikel` int(100) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -4,7 +4,7 @@ session_start();
 ?>
 <html>
 	<head>
-		<link type="text/css" rel="stylesheet" href="Css/style_admin.css" />
+		<link type="text/css" rel="stylesheet" href="css/style_admin.css" />
 		<title>Edit Article</title>
 		<?php
 			$id = $_GET['ID'];

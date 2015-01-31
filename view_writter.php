@@ -3,7 +3,7 @@
 <html>
 	<head>
 		<title>Edit Profile</title>
-		<link type="text/css" rel="stylesheet" href="Css/Style.css" />
+		<link type="text/css" rel="stylesheet" href="css/Style.css" />
 	</head>
 	<body>
 		<?php require_once("header.php"); ?>

@@ -3,7 +3,7 @@
 ?>
 <html>
 	<head>
-		<link type="text/css" rel="stylesheet" href="Css/style_admin.css" />
+		<link type="text/css" rel="stylesheet" href="css/style_admin.css" />
 		<title>Edit User</title>
 		<?php
 			$id = $_GET['ID'];
@@ -122,6 +122,7 @@
 					<tr>
 						<td></td>
 						<td><input type ="submit" name ="update" value="Update"></td>
+						<td><a href="admin.php"  style="text-decoration:none;"><input type="button" value="Back"></a></td>
 					</tr>
 					</table>
 				</form>

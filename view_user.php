@@ -3,7 +3,7 @@
 <html>
 	<head>
 		<title>View Profile</title>
-		<link type="text/css" rel="stylesheet" href="Css/Style.css" />
+		<link type="text/css" rel="stylesheet" href="css/Style.css" />
 	</head>
 	<body>
 		<?php require_once("header.php"); ?>
@@ -41,25 +41,13 @@
 						</tr>
 						<tr>
 							<td>
+								<div style="margin-left:40px;">
 								<!-- buat tanggal -->
 								26 November 2014
+								</div>
 							</td>
 						</tr>
 					</table>
-				</div>
-				
-				<!-- tengah -->
-				<div>
-					<div id="viewAtas">
-						<!-- image -->
-						<table width="70%">
-						<tr>
-							<td width="150px">
-								<img src="css/images/kucing.jpg" = width="120px" height="130px">
-							
-						</tr>
-						</table>
-					</div>
 				</div>
 				
 				<!-- bawah -->
@@ -129,25 +117,6 @@
 				</div>
 			</div>
 			<!-- kanan -->
-			<div id="outer_kanan" class="conten_kanan_kiri">
-				<div id="form_login">
-					<div id="insert_login" border="black">
-						<table>
-							<tr>
-								<td>
-									<h1>Hi! <?php echo htmlentities($_SESSION['namaUser']);?></h1>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="index.php"><h3>Log Out</h3></a>
-								</td>
-							</tr>
-						</table>
-					</div>
-				</div>
-				
-				</div><!--Tutup kanan-->
-			</div>
+			<?php include ("outer_kanan_user.php")?>
 			
 <?php require_once("footer.php"); ?>
